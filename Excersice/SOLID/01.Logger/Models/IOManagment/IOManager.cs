@@ -7,25 +7,25 @@ namespace _01.Logger.Models.IOManagment
     {
         private string path;
         private string directory;
-        private string fileName;
+        private string file;
 
         public IOManager()
         {
             this.path = this.GetPath();
         }
 
-        public IOManager(string directory, string fileName)
+        public IOManager(string directory, string file)
             : this()
         {
             this.directory = directory;
-            this.fileName = fileName;
+            this.file = file;
         }
 
         public string DirectoryPath 
             => this.path + this.directory;
 
         public string FilePath 
-            => this.DirectoryPath + this.fileName;
+            => this.DirectoryPath + this.file;
 
         public void EnsureDirectoryAndFileExist()
         {

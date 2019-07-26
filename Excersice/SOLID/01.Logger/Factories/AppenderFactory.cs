@@ -39,7 +39,7 @@ namespace _01.Logger.Factories
             {
                 IFile file = new LogFile();
 
-                appender = new FileAppender(layout, level, file); ;
+                appender = new FileAppender(layout, level, file); 
             }
             else
             {

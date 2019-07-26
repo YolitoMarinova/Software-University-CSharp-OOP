@@ -10,7 +10,7 @@ namespace _01.Logger.Models.Files
 {
     public class LogFile : IFile
     {
-        private const string CURRENT_DIRECTORY = "\\log\\";
+        private const string CURRENT_DIRECTORY = "\\logs\\";
         private const string CURRENT_PATH = "log.txt";
 
         private string curretnPath;
@@ -21,7 +21,7 @@ namespace _01.Logger.Models.Files
             this.IOManager = new IOManager(CURRENT_DIRECTORY,CURRENT_PATH);
             this.curretnPath = this.IOManager.GetPath();
             this.IOManager.EnsureDirectoryAndFileExist();
-            this.Path = CURRENT_PATH + CURRENT_DIRECTORY + this.curretnPath;
+            this.Path = curretnPath + CURRENT_DIRECTORY + CURRENT_PATH;
         }
 
         public string Path { get; }

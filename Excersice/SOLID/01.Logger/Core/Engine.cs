@@ -40,14 +40,13 @@ namespace _01.Logger.Core
                 try
                 {
                     error = this.errorFactory.GetError(date,level,message);
+                    this.logger.Log(error);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-                    continue;
                 }
-
-                this.logger.Log(error);
+                command = Console.ReadLine();
             }
 
             Console.WriteLine(this.logger.ToString()); ;
